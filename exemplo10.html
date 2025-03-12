@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo08</title>
+    <title>Exemplo10</title>
     <style>
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,12 +19,18 @@
         }
 
         .bloco {
-            background-color: blue;
             color: white;
             padding: 1rem;
             margin: 1rem;
             width: 7rem;
             height: 3rem;
+        }
+
+        .par {
+            background-color: blue;
+        }
+        .ímpar {
+            background-color: green;
         }
     </style>
 </head>
@@ -32,25 +38,22 @@
 <body>
     <div class="container">
         <script>
-            /**Estrutura sequencial:
+            /**Estrutura Condicional:
              * Comandos de saída
              * declaração de variavel
              * Comando de entrada
              * Template String
              * */
-            let num = parseInt(prompt("informe o primeiro número"));
-            
-            
+            let idade = parseInt(prompt("informe a idade"));
 
-            document.write(`<div class ="bloco">log_2:({num}) = ${Math.log2(num)} </div>`);
-            document.write(`<div class ="bloco">log_10:({num}) = ${Math.log10(num)}</div>`);
-            document.write(`<div class ="bloco">log_e:({num}) = ${Math.log(Math.E)}</div>`);
-            document.write(`<div class ="bloco">raiz:({nu1}) = ${Math.sqrt(num)}</div>`);
-            document.write(`<div class ="bloco">${num} ^3 = ${Math.pow(num,3)}</div>`);
-            document.write(`<div class ="bloco">raiz:({num}) = ${Math.pow(num, .5)}</div>`);
-
-
-
+            if (idade <16 ) {
+                document.write(`<div class="bloco par"> A pessoa não pode votar </div>`)
+                document.write(`<div class="bloco par"> A pessoa é menor de idade! </div>`)
+            }
+            else {
+                document.write(`<div class ="bloco ímpar"> A pessoa é maior de idade! </div>`)
+                document.write(`<div class ="bloco ímpar"> A pessoa pode votar! </div>`)
+            }
         </script>
     </div>
 </body>
